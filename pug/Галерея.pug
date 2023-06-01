@@ -1,0 +1,14 @@
+extends template
+block variables
+	- title = 'Галерея'
+block content
+	.imagesFlex
+		include imageBlock
+		+createImageBlock('https://chessmatenok.ru/wp-content/uploads/2017/02/italianskaia-partia.jpg')
+		+createImageBlock('https://chessmatenok.ru/wp-content/uploads/2017/02/debiut-chetireh-konej.jpg')
+		//+createImageBlock('img/block-css.png', '25%')
+		//+createImageBlock('img/block2.png', '25%')
+		//+createImageBlock('img/block3.png', '25%')
+	.imagesFlex
+		+createImageBlock('https://chessbot.ru/wp-content/uploads/2017/10/Ispanskaya-partiya.jpg')
+		+createImageBlock('https://chessmatenok.ru/wp-content/uploads/2017/02/italianskaia-partia.jpg')

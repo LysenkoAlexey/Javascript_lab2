@@ -1,0 +1,26 @@
+mixin createMenuBar (title)
+	.menuFlex
+		.menuItem
+			if title == 'Главная'
+				a(href="index.html")
+					span Главная
+			else
+				a(href="index.html") Главная
+		.menuItem
+			if title == 'Таблица'
+				a(href="Таблица.html")
+					span Таблица
+			else
+				a(href="Таблица.html") Таблица
+		.menuItem
+			if title == 'Дебют Рети'
+				a(href="ДебютРети.html")
+					span Дебют Рети
+			else
+				a(href="ДебютРети.html") Дебют Рети
+		.menuItem
+			if title == 'Галерея'
+				a(href="Галерея.html")
+					span Галерея
+			else
+				a(href="Галерея.html") Галерея

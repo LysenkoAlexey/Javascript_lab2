@@ -1,0 +1,38 @@
+setNewTextParametres(varmargin, varLineHeight, indent, spacing)
+    p
+        margin varmargin
+        line-height varLineHeight
+        text-indent indent
+        word-spacing spacing
+
+.textFlex
+  display flex !important
+  flex-direction row
+  justify-content space-between
+  align-content stretch
+  flex-wrap wrap
+
+.textFlexLeft1
+  display flex !important
+  width 32.33%
+  //p
+    //line-height 2
+    //margin 1vw
+    //text-align justify
+    //text-indent 2vw
+    //word-spacing 0.5em
+  setNewTextParametres(1vw, 2, 2vw, 0.5em)
+
+.textFlexRight1
+  display flex !important
+  flex-direction column
+  width 64.66%
+  setNewTextParametres(1vw, 2, 2vw, 0.5em)
+  //p
+    //line-height 2
+    //margin 1vw
+    //text-align justify
+    //text-indent 2vw
+    //word-spacing 0.5em
+  
+

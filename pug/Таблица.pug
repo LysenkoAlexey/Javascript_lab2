@@ -1,0 +1,75 @@
+extends template
+block source
+	script(src="http://d3js.org/d3.v7.min.js")
+	script(src = 'js/tableData.js')
+
+
+block content
+	
+	form
+		ul
+			li Расположить по:
+			label 
+				input(type='radio' name='quest_1' value='ascending' checked) 
+				| Возрастанию
+			label 
+				input(type='radio' name='quest_1' value='descending')
+				| Убыванию
+			li Сортировка первого уровня по:
+			label 
+				input(type='radio' name='quest_2' value='number' checked) 
+				| Номеру
+			label 
+				input(type='radio' name='quest_2' value='debut') 
+				| Дебюту
+			label
+				input(type='radio' name='quest_2' value='moves') 
+				| Ходам
+			label
+				input(type='radio' name='quest_2' value='parties') 
+				| Количеству партий
+			label
+				input(type='radio' name='quest_2' value='percent')
+				| Проценту побед
+			label
+				input(type='radio' name='quest_2' value='openness')
+				| Открытости
+
+			li Сортировка второго уровня по:
+			label 
+				input(type='radio' name='quest_3' value='number') 
+				| Номеру
+			label 
+				input(type='radio' name='quest_3' value='debut' checked) 
+				| Дебюту
+			label 
+				input(type='radio' name='quest_3' value='moves') 
+				| Ходам
+			label 
+				input(type='radio' name='quest_3' value='parties') 
+				| Количеству партий
+			label 
+				input(type='radio' name='quest_3' value='percent')
+				| Проценту побед
+			label 
+				input(type='radio' name='quest_3' value='openness') 
+				| Открытости
+		button(onclick = "superSort()" type="button") Сортировать
+		br
+
+
+
+	div 
+		.main
+			input(type='text' name='filterText')
+			
+			//select(id="toFilter" onchange="filter(this.value)")
+			select(id="toFilter" )
+			button(onclick = "filter()" type = "button") Фильтровать
+			button(onclick = "reset_filter()" type = "button") Сброс фильтра
+
+			table
+				thead
+				tbody
+	footer
+		script(src = 'js/newSort.js')
